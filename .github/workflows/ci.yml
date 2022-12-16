@@ -14,10 +14,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - run: echo $HOME
-      - run: ls $HOME
-      - run: ls -la ~/opt
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}      
       - name: Cache tea dependencies
         uses: actions/cache@v3
         with:
@@ -27,3 +24,4 @@ jobs:
         uses: teaxyz/setup@v0
         with:
           target: build
+      - run: ls -la ~/opt
