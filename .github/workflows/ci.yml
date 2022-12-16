@@ -18,7 +18,7 @@ jobs:
       - name: Cache tea dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.tea
+          path: ${{ github.workspace }}/.tea
           key: ${{ runner.os }}-tea-${{ hashFiles('**/README.md') }}
       - name: Build Next.js using teaxyz
         uses: teaxyz/setup@v0
