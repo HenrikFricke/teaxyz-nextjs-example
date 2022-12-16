@@ -17,10 +17,11 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - run: echo $HOME
       - run: ls $HOME
+      - run: ls -la ~/opt
       - name: Cache tea dependencies
         uses: actions/cache@v3
         with:
-          path: ${{ github.workspace }}/.tea
+          path: ~/opt
           key: ${{ runner.os }}-tea-${{ hashFiles('**/README.md') }}
       - name: Build Next.js using teaxyz
         uses: teaxyz/setup@v0
