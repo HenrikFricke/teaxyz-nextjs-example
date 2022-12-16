@@ -16,15 +16,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```sh
 # Install dependencies
-npm install
+npm ci
 
 # Lint code
 npm run lint 
 
 # Run unit tests
-npm test
+npm run test
 
-# Build production dist
+# Build production (Check `.next` directory afterwards)
 npm run build
 ```
 
