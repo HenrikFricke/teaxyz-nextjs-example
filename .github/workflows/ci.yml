@@ -15,9 +15,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - run: env
-      - run: ls ${{ github.workspace }}
-      - run: ls ~
+      - run: echo $HOME
+      - run: ls $HOME
       - name: Cache tea dependencies
         uses: actions/cache@v3
         with:
